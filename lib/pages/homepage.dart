@@ -1,6 +1,7 @@
 
 
 import 'package:bookapp_frontend/pages/addpage.dart';
+import 'package:bookapp_frontend/pages/viewpage.dart';
 import 'package:flutter/material.dart';
 
 
@@ -32,6 +33,14 @@ class homepage extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder:(context)=>addpage()));
                     }, child: Text("Add item"))),
             SizedBox(height: 10,),
+            SizedBox(
+                width: 250,
+                height: 60,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context)=>viewpage()));
+                    }, child: Text("view all"))),
 
           ],
         ),
