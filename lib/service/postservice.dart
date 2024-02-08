@@ -40,4 +40,20 @@ class PostApiService{
   }
 
 
+  Future<List<Posts>> getPosts() async{
+    var client =http.Client();
+    var apiUrl=Uri.parse("http://192.168.118.18:3001/book/viewall");
+    var response = await client.get(apiUrl);
+    if(response.statusCode==200)
+    {
+      return postsFromJson(response.body);
+    }
+    else
+    {
+      return [];
+    }
+
+  }
+
+
 }
